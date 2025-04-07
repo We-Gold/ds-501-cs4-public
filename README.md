@@ -7,3 +7,7 @@ Use `uv sync` to install the dependencies and create the virtual environment.
 You can select the python interpreter from `.venv` in VSCode, and then run the code in the terminal.
 
 Use `uv add <package>` to add a new package to the project. This is preferred to using pip directly.
+
+# Usage
+
+Run `uv run python main.py` to run the project. This will run the main.py file in the current directory.
