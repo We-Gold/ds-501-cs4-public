@@ -1,4 +1,8 @@
-from src.load_demographic_data import DEMOGRAPHIC_DATASETS, load_demographic_data
+from src.load_demographic_data import (
+    DEMOGRAPHIC_DATASETS,
+    LOCATION_TYPE,
+    load_demographic_data,
+)
 from src.load_mta_dataset import DATASETS, download_mta_data, load_mta_data
 
 if __name__ == "__main__":
@@ -15,7 +19,8 @@ if __name__ == "__main__":
     print()
 
     # Load demographic data
-    load_demographic_data()
+    # Options: Community District, Borough, City
+    load_demographic_data(location_type=LOCATION_TYPE["Community District"])
 
     print()
 
