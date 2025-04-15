@@ -20,6 +20,9 @@ https://boundaries.beta.nyc/?map=cd&dist=208
 
 GeoJSON: https://www.nyc.gov/content/planning/pages/resources/datasets/community-districts
 
+### Census Data for Aligning FIPS to Community Districts
+https://data.cityofnewyork.us/City-Government/2020-Census-Tracts/63ge-mke6/data_preview
+
 # Development
 
 Uses the uv python package manager to install the dependencies. 
