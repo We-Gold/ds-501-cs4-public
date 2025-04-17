@@ -23,6 +23,13 @@ GeoJSON: https://www.nyc.gov/content/planning/pages/resources/datasets/community
 ### Census Data for Aligning FIPS to Community Districts
 https://data.cityofnewyork.us/City-Government/2020-Census-Tracts/63ge-mke6/data_preview
 
+### Historic Ridership Data
+
+Data with Latitude and Longitude: https://public.tableau.com/views/NYCSubwayRidership/Summary?:embed=y&:showVizHome=no&:host_url=https://public.tableau.com/&:embed_code_version=3&:tabs=yes&:toolbar=yes&:animate_transition=yes&:display_static_image=no&:display_spinner=no&:display_overlay=yes&:display_count=yes&publish=yes&:loadOrderID=1
+
+Original Data https://www.mta.info/agency/new-york-city-transit/subway-bus-ridership-2022
+
+
 # Development
 
 Uses the uv python package manager to install the dependencies. 
