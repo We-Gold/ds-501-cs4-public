@@ -1,3 +1,41 @@
+# About
+
+In this project, we identified areas in New York City (NYC) that are underrepresented in transit accessibility. We wanted to understand areas of opportunity (defined as currently underserved areas where we predict people would have high public transportation usage) where the MTA could create a transit station that we believe will receive a lot of foot traffic and ticket sales. 
+
+To solve this problem, we determined the average distance to a transit station from areas all over NYC. We then determined if the area is worth investing in (would a transit station here be profitable?) by looking at predicted ridership. Each subway ride in NYC earns $2.90 per ride per person (https://www.mta.info/fares-tolls/subway-bus), and since we can predict weekly ridership, we will predict weekly revenue based on that predicted ridership.
+
+Our data science approach will not only enable us to identify underserved areas but also to predict ridership for these areas. The resulting decision-making platform will enable the MTA to more readily evaluate potential locations for transit stops/stations rather than having to manually sort through all options. 
+
+# Results
+
+## Identifying Underserved Areas
+
+![](./figures/dist_to_subway.png)
+
+To identify underserved areas, we used the average distance to a subway station as a proxy for accessibility. We calculated the average distance to a subway station for points all over NYC, and then we plotted the results. The areas with the highest average distance to a subway station are the most underserved areas.
+
+| ![](./figures/ground_truth_ridership.png) | ![](./figures/pred_ridership.png) |
+|---------------------------------------|---------------------------------------|
+| **Ground Truth Ridership**                | **Predicted Ridership**                |
+
+We next constructed a model to predict weekly ridership based on demographics data like median income and population density. This data came from NYC census data, so predictions are for census tracts. We tried a few different models, but the best performing model was a Random Forest Regressor, with an R^2 of 0.675 (on 10-fold cross-validation).
+
+The two maps above show the ground truth ridership and the predicted ridership. There are a few notable differences, in particular, some areas have one stop with high ridership, but since the values reflect on the entire census tract, the ground truth prediction is much higher for those areas.
+
+![](./figures//predicted_revenue.png)
+
+We also computed the predicted revenue for each census tract based on the predicted ridership. The map above shows the predicted revenue for each census tract. 
+
+![](./figures/areas_of_opportunity.png)
+
+Our final result is a map of the areas of opportunity, which is the product of the average distance to a subway station and the predicted revenue (both normalized to a range of 0-1). The areas with the highest values are the areas that are most underserved and have the highest predicted revenue.
+
+We discuss these results further in our report and presentation, linked below.
+
+**Report:** https://docs.google.com/document/d/1vnjbzVh_RYYclWAOj0efJ_VCKNdW5mEic235lsq59Hc/edit?usp=sharing
+
+**Slides:** https://docs.google.com/presentation/d/1bggkTmrDGwmAPLfzoR553Cgrc8w8DcQyCdhVLl1KfVM/edit?usp=sharing
+
 # Datasets
 
 ### NYC Census Data
